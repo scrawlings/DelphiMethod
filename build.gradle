@@ -1,0 +1,80 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+ideaProject {
+    javaVersion ='1.6'
+}
+
+task wrapper (type: Wrapper) {
+    gradleVersion = '0.9.2'
+}
+ 
+repositories {
+    flatDir name: 'localRepository', dirs:'lib'
+    mavenCentral()
+    mavenCentral name: 'jersey',     urls: ['http://download.java.net/maven/1',
+                                            'http://download.java.net/maven/2']
+    mavenCentral name: 'freemarker', urls: 'http://mvnrepository.com'
+}
+
+dependencies {
+    compile group: 'org.freemarker',   name: 'freemarker',                 version: '2.3.16'
+    compile group: 'com.sun.jersey',   name: 'jersey-bundle',              version: '1.5'
+    compile group: 'com.sun.grizzly',  name: 'grizzly-servlet-webserver',  version: '1.9.18-i'
+    compile group: 'javax.ws.rs',      name: 'jsr311-api',                 version: '1.1.1'
+
+    compile group: 'asm',              name: 'asm',                        version: '3.1'
+}
+
+
+task copyTemplateResources (type: Copy) {
+    into 'build/classes/main'
+    from ('src/main/java') {
+        include '**/*.ftl'
+    }
+}
+processResources.dependsOn copyTemplateResources 
+
+task debugServer(dependsOn: 'jar') << {
+    Process proc = ['java',  
+                    '-Xdebug',
+                    '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005',
+                    '-jar', 
+                    "$buildDir/libs/jersey_experiment.jar",
+                   ].execute()
+    proc.consumeProcessErrorStream(System.err)
+    proc.consumeProcessOutputStream(System.out)
+    if (proc.waitFor() != 0) {
+        throw new RuntimeException('exec failed')
+    }
+}
+
+task startServer(dependsOn: 'jar') << {
+    Process proc = ['java',  "-jar", "$buildDir/libs/jersey_experiment.jar"].execute()
+    proc.consumeProcessErrorStream(System.err)
+    proc.consumeProcessOutputStream(System.out)
+    if (proc.waitFor() != 0) {
+        throw new RuntimeException('exec failed')
+    }
+}
+
+
+task runApp (dependsOn: 'classes', type: JavaExec) {
+    main = 'org.exemplar.WebAppStandalone'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task debugApp (dependsOn: 'classes', type: JavaExec) {
+    main = 'org.exemplar.WebAppStandalone'
+    classpath = sourceSets.main.runtimeClasspath
+    jvmArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
+}
+
+jar {
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    manifest {
+        attributes("Main-Class": "org.exemplar.WebAppStandalone")
+    }
+}
+
