@@ -55,48 +55,132 @@
     <breakpoint_rules />
     <ui_properties />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="jersey_experiment" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="WebAppStandalone.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/WebAppStandalone.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.45046923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloWorldResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/HelloWorldResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="root.ftl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/templates/root.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="44" selection-start="113" selection-end="113" vertical-scroll-proportion="-2.857143">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.ftl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/templates/welcome.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="106" selection-start="242" selection-end="242" vertical-scroll-proportion="-5.142857">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="WebAppStandalone.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/WebAppStandalone.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="36" column="0" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SurveysResource.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="45" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ResponsesResource.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/ResponsesResource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="92" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="root.ftl" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/templates/root.ftl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="47" selection-start="302" selection-end="302" vertical-scroll-proportion="-5.714286">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="basic_template.ftl" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/templates/basic_template.ftl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="27" column="89" selection-start="831" selection-end="831" vertical-scroll-proportion="0.3529412">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="welcome.ftl" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/templates/welcome.ftl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="-2.2857144">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Survey.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/Survey.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="42" column="5" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="SurveysResource.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="44" column="5" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="WelcomeResource.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/WelcomeResource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="61" column="0" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="surveys.ftl" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/templates/surveys.ftl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="34" column="97" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-19.428572">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SurveyResource.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveyResource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="31" column="31" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Survey.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/Survey.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="69" column="57" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.7747654">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -110,8 +194,15 @@
         <option value="$PROJECT_DIR$/src/main/java/org/exemplar/WebAppStandalone.java" />
         <option value="$PROJECT_DIR$/static/templates/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/org/exemplar/resources/HelloWorldResource.java" />
-        <option value="$PROJECT_DIR$/static/templates/root.ftl" />
         <option value="$PROJECT_DIR$/static/templates/welcome.ftl" />
+        <option value="$PROJECT_DIR$/static/templates/root.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/org/exemplar/resources/ResponsesResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/exemplar/resources/Survey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveyResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java" />
+        <option value="$PROJECT_DIR$/static/templates/surveys.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/org/exemplar/resources/WelcomeResource.java" />
+        <option value="$PROJECT_DIR$/static/templates/basic_template.ftl" />
       </list>
     </option>
   </component>
@@ -273,6 +364,14 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.exemplar.resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/templates" />
+    </key>
+  </component>
   <component name="RunManager" selected="Remote.debugServer">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -283,6 +382,22 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpecsRunConfiguration" factoryName="Specs">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="packagepath" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="sysFilter" value=".*" />
+      <setting name="exampleFilter" value=".*" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -358,6 +473,21 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="version" value="false" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="false" name="debugServer" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -409,23 +539,23 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39979756" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Script Monkey" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959914" sideWeight="0.6700405" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959914" sideWeight="0.6700405" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -467,30 +597,72 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/HelloWorldResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/ResponsesResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/templates/welcome.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="106" selection-start="242" selection-end="242" vertical-scroll-proportion="-5.142857">
+        <state line="12" column="92" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/templates/root.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="44" selection-start="113" selection-end="113" vertical-scroll-proportion="-2.857143">
+        <state line="10" column="47" selection-start="302" selection-end="302" vertical-scroll-proportion="-5.714286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/templates/welcome.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="-2.2857144">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/WebAppStandalone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.45046923">
+        <state line="36" column="0" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/WelcomeResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/templates/basic_template.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="89" selection-start="831" selection-end="831" vertical-scroll-proportion="0.3529412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="5" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/templates/surveys.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="97" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-19.428572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveyResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="31" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/Survey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="57" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.7747654">
           <folding />
         </state>
       </provider>
