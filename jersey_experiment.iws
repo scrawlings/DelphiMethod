@@ -66,10 +66,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="WebAppStandalone.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="WebAppStandalone.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/WebAppStandalone.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="0" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
+                <state line="30" column="51" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.3887689">
                   <folding />
                 </state>
               </provider>
@@ -78,7 +78,7 @@
           <file leaf-file-name="SurveysResource.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="45" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
+                <state line="70" column="0" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -96,16 +96,16 @@
           <file leaf-file-name="root.ftl" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/templates/root.ftl">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="47" selection-start="302" selection-end="302" vertical-scroll-proportion="-5.714286">
+                <state line="10" column="47" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="basic_template.ftl" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="basic_template.ftl" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/templates/basic_template.ftl">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="89" selection-start="831" selection-end="831" vertical-scroll-proportion="0.3529412">
+                <state line="27" column="71" selection-start="831" selection-end="831" vertical-scroll-proportion="-15.428572">
                   <folding />
                 </state>
               </provider>
@@ -114,7 +114,7 @@
           <file leaf-file-name="welcome.ftl" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/templates/welcome.ftl">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="-2.2857144">
+                <state line="4" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -133,10 +133,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="SurveysResource.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="SurveysResource.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="44" column="5" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0">
+                <state line="22" column="58" selection-start="510" selection-end="510" vertical-scroll-proportion="0.27528676">
                   <folding />
                 </state>
               </provider>
@@ -160,19 +160,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SurveyResource.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveyResource.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="31" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Survey.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Survey.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/Survey.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="69" column="57" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.7747654">
+                <state line="67" column="105" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -242,6 +233,8 @@
     </navigator>
     <panes>
       <pane id="Favorites" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,16 +343,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -385,6 +376,14 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/Applications/Flash Player.app/Contents/MacOS/Flash Player" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="SpecsRunConfiguration" factoryName="Specs">
       <module name="" />
       <setting name="path" value="" />
@@ -394,14 +393,6 @@
       <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <setting name="sysFilter" value=".*" />
       <setting name="exampleFilter" value=".*" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/Applications/Flash Player.app/Contents/MacOS/Flash Player" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -545,17 +536,17 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Script Monkey" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959914" sideWeight="0.6700405" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959914" sideWeight="0.6700405" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -599,49 +590,31 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/ResponsesResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="92" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="92" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/templates/root.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="47" selection-start="302" selection-end="302" vertical-scroll-proportion="-5.714286">
+        <state line="10" column="47" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/templates/welcome.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="-2.2857144">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/WebAppStandalone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/WelcomeResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="61" column="0" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/templates/basic_template.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/Survey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="89" selection-start="831" selection-end="831" vertical-scroll-proportion="0.3529412">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="5" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0">
+        <state line="67" column="105" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -653,16 +626,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveyResource.java">
+    <entry file="file://$PROJECT_DIR$/static/templates/basic_template.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
+        <state line="27" column="71" selection-start="831" selection-end="831" vertical-scroll-proportion="-15.428572">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/Survey.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/WebAppStandalone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="57" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.7747654">
+        <state line="30" column="51" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.3887689">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/exemplar/resources/SurveysResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="58" selection-start="510" selection-end="510" vertical-scroll-proportion="0.27528676">
           <folding />
         </state>
       </provider>

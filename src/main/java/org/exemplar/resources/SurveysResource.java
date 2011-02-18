@@ -18,6 +18,31 @@ import java.util.UUID;
 @Path("/delphi/surveys")
 public class SurveysResource {
 
+    @DELETE
+    @Path("/{id}")
+    @Produces("text/plain")
+    public String deleteSurvey(
+        @PathParam("id") String id
+    ) throws IOException, TemplateException
+    {
+        Survey.delete(id);
+        return "OK";
+    }
+
+    @POST
+    @Path("/{id}")
+    @Produces("text/plain")
+    public String deleteSurveyForPrototype(
+        @PathParam("id") String id,
+        @FormParam("_method") String method
+    ) throws IOException, TemplateException
+    {
+        if ("delete".equals(method)) {
+            return deleteSurvey(id);
+        }
+        return "OK";
+    }
+
     @GET
     @Produces("text/html")
     public String presentVisibleSurveys() throws IOException, TemplateException

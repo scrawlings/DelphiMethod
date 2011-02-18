@@ -28,7 +28,7 @@ public class WebAppStandalone {
 
         System.out.println("Starting grizzly...");
         SelectorThread threadSelector = GrizzlyWebContainerFactory.create(baseUri, initParams);
-        System.out.println(String.format("Try out %sdelphi/login\nHit enter to stop it...", baseUri));
+        System.out.println(String.format("Server at %sdelphi\nHit enter to stop it...", baseUri));
         System.in.read();
         threadSelector.stopEndpoint();
         System.exit(0);
