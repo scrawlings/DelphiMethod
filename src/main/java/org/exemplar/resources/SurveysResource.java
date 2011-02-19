@@ -8,6 +8,7 @@ import freemarker.template.TemplateException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.StreamingOutput;
 import java.io.*;
 import java.security.PublicKey;
 import java.util.HashMap;
@@ -19,7 +20,7 @@ import java.util.UUID;
 public class SurveysResource {
 
     @DELETE
-    @Path("/{id}")
+    @Path("{id}")
     @Produces("text/plain")
     public String deleteSurvey(
         @PathParam("id") String id
@@ -30,7 +31,7 @@ public class SurveysResource {
     }
 
     @POST
-    @Path("/{id}")
+    @Path("{id}")
     @Produces("text/plain")
     public String deleteSurveyForPrototype(
         @PathParam("id") String id,
@@ -45,25 +46,29 @@ public class SurveysResource {
 
     @GET
     @Produces("text/html")
-    public String presentVisibleSurveys() throws IOException, TemplateException
+    public StreamingOutput presentVisibleSurveys() throws IOException
     {
-        StringWriter renderedPage = new StringWriter();
-        Map root = new HashMap();
-        Template page = org.exemplar.WebAppStandalone.cfg.getTemplate("surveys.ftl");
-
-        root.put("surveys", Survey.all());
-
-        page.process(root, renderedPage);
-
-        return renderedPage.toString();
+        return new StreamingOutput() {
+            @Override
+            public void write(OutputStream output) throws IOException, WebApplicationException {
+                Map root = new HashMap();
+                root.put("surveys", Survey.all());
+                Template page = org.exemplar.WebAppStandalone.cfg.getTemplate("surveys.ftl");
+                try {
+                    page.process(root, new OutputStreamWriter(output));
+                } catch (TemplateException te) {
+                    throw new WebApplicationException(Response.Status.INTERNAL_SERVER_ERROR);
+                }
+            }
+        };
     }
 
     @POST
     @Produces("text/html")
-    public String createNewSurvey(
+    public StreamingOutput createNewSurvey(
         @FormParam("title") String title,
         @FormParam("description") String description
-    ) throws IOException, TemplateException
+    ) throws IOException
     {
         new Survey(title, description).persist();
         return presentVisibleSurveys();
