@@ -54,13 +54,8 @@ public class Survey {
             BufferedReader reader = new BufferedReader(new FileReader(surveyFile));
             String id = reader.readLine();
             String title = reader.readLine();
-            StringBuilder description = new StringBuilder();
-            String descriptionLine = reader.readLine();
-            while (descriptionLine != null && descriptionLine.length() > 0) {
-                description.append(descriptionLine);
-                descriptionLine = reader.readLine();
-            }
-            return new Survey(id, title, description.toString());
+            String description = reader.readLine();
+            return new Survey(id, title, description);
         } catch (IOException ioe) {}
 
         return null;
