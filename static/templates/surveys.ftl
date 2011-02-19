@@ -5,6 +5,7 @@
 </head>
 <body>
   <div id="existing_surveys">
+    <p>Existing Surveys:</p>
     <ul>
       <#list surveys as survey>
       <li>
@@ -14,11 +15,18 @@
     </ul>
   </div>
 
-  <form method="post" action="">
-    <p>Survey Title: <input type='text' name='title' id='title' size='40' /></p>
-    <p>Survey Description: <input type='text' name='description' id='description' size='140' /></p>
-    <p><input type="submit" value="Submit" /></p>
-  </form>
+  <div id="propose_new_survey" style="background-color:#DDD">
+    <p>Propose a new Survey:</p>
+    <div style="margin: 0em 1.5em">
+      <form method="post" action="">
+        <p>Survey Title: <input type='text' name='title' id='title' size='40' /><br />
+           Survey Description: <input type='text' name='description' id='description' size='140' /><br />
+           <input type="submit" value="Submit" /></p>
+      </form>
+    </div>
+  </div>
+
+  <div><p>(<a href="/delphi">home</a>|<a href="/delphi?action=logout">logout</a>)</p></div>
 
   <script type="text/javascript">
     $$('.delete').invoke('observe', 'click', function(event) {

@@ -22,8 +22,15 @@ public class WelcomeResource {
         @QueryParam("action") String action
     ) throws IOException, TemplateException
     {
-        StringWriter renderedPage = new StringWriter();
-        if (!"logout".equals(action)) {
+        Response.ResponseBuilder response;
+
+        if ("logout".equals(action)) {
+            response = Response
+                        .temporaryRedirect(UriBuilder.fromResource(WelcomeResource.class).build())
+                        .cookie(new NewCookie(new NewCookie("delphi_user", ""), "deleting cookie", 0, false));
+
+        } else {
+            StringWriter renderedPage = new StringWriter();
             Map root = new HashMap();
             Template page;
             if (delphiUser == null) {
@@ -33,14 +40,6 @@ public class WelcomeResource {
                 root.put("username", delphiUser);
             }
             page.process(root, renderedPage);
-        }
-
-        Response.ResponseBuilder response;
-        if ("logout".equals(action)) {
-            response = Response.temporaryRedirect(UriBuilder.fromResource(WelcomeResource.class).build())
-                               .cookie(new NewCookie(new NewCookie("delphi_user", ""), "deleting cookie", 0, false));
-
-        } else {
             response = Response.ok(renderedPage.toString());
         }
 
@@ -62,7 +61,10 @@ public class WelcomeResource {
 
         page.process(root, renderedPage);
 
-        return Response.ok(renderedPage.toString()).cookie(new NewCookie("delphi_user", username)).build();
+        return Response
+                .ok(renderedPage.toString())
+                .cookie(new NewCookie("delphi_user", username))
+                .build();
 
     }
 }
