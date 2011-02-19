@@ -6,6 +6,7 @@ import freemarker.template.TemplateException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.HashMap;
@@ -22,22 +23,29 @@ public class WelcomeResource {
     ) throws IOException, TemplateException
     {
         StringWriter renderedPage = new StringWriter();
-        Map root = new HashMap();
-        Template page;
-        if (delphiUser == null || "logout".equals(action)) {
-            page = org.exemplar.WebAppStandalone.cfg.getTemplate("welcome.ftl");
-        } else {
-            page = org.exemplar.WebAppStandalone.cfg.getTemplate("root.ftl");
-            root.put("username", delphiUser);
+        if (!"logout".equals(action)) {
+            Map root = new HashMap();
+            Template page;
+            if (delphiUser == null) {
+                page = org.exemplar.WebAppStandalone.cfg.getTemplate("welcome.ftl");
+            } else {
+                page = org.exemplar.WebAppStandalone.cfg.getTemplate("root.ftl");
+                root.put("username", delphiUser);
+            }
+            page.process(root, renderedPage);
         }
 
-        page.process(root, renderedPage);
-
-        Response.ResponseBuilder ok = Response.ok(renderedPage.toString());
+        Response.ResponseBuilder response;
         if ("logout".equals(action)) {
-            ok.cookie(new NewCookie(new NewCookie("delphi_user", ""), "deleting cookie", 0, false));
+            response = Response.temporaryRedirect(UriBuilder.fromResource(WelcomeResource.class).build())
+                               .cookie(new NewCookie(new NewCookie("delphi_user", ""), "deleting cookie", 0, false));
+
+        } else {
+            response = Response.ok(renderedPage.toString());
         }
-        return ok.build();
+
+        return response.build();
+
     }
 
     @POST
