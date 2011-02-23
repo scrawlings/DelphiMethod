@@ -51,7 +51,7 @@ task debugServer(dependsOn: 'jar') << {
 }
 
 task startServer(dependsOn: 'jar') << {
-    Process proc = ['java',  "-jar", "$buildDir/libs/jersey_experiment.jar"].execute()
+    Process proc = ['java',  "-jar", "$buildDir/libs/DelphiMethod.jar"].execute()
     proc.consumeProcessErrorStream(System.err)
     proc.consumeProcessOutputStream(System.out)
     if (proc.waitFor() != 0) {
