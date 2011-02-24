@@ -4,3 +4,6 @@ build
 out
 data
 jersey_experiment.*
+*.iml
+*.ipr
+*.iws
