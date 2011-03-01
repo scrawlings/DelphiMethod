@@ -8,16 +8,10 @@ import freemarker.template.TemplateException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.io.*;
-import java.net.URI;
-import java.security.PublicKey;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.List;
-import java.util.UUID;
-import java.util.Map.Entry;
 
-@Path("/delphi/surveys")
+@Path("/surveys")
 public class SurveysResource {
 
     @DELETE
@@ -52,9 +46,8 @@ public class SurveysResource {
         final @PathParam("id") String id
     ) {
         return new StreamingOutput() {
-            @Override
             public void write(OutputStream output) throws IOException, WebApplicationException {
-                Map root = new HashMap();
+                Map<String, Object> root = new HashMap<String, Object>();
                 root.put("survey", Survey.recover(id));
                 Template page = org.exemplar.WebAppStandalone.cfg.getTemplate("survey.ftl");
                 try {
@@ -93,9 +86,8 @@ public class SurveysResource {
     {
 
         return new StreamingOutput() {
-            @Override
             public void write(OutputStream output) throws IOException, WebApplicationException {
-                Map root = new HashMap();
+                Map<String, Object> root = new HashMap<String, Object>();
                 root.put("surveys", Survey.all());
                 Template page = org.exemplar.WebAppStandalone.cfg.getTemplate("surveys.ftl");
                 try {
