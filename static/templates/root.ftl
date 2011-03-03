@@ -6,7 +6,6 @@
   <p>Welcome, ${username}, (<a href="/delphi?action=logout">logout</a>).</p>
   <p><a href="/delphi/surveys">Facilitate</a> surveys.</a></p>
   <p><a href="/delphi/responses">Participate</a> in a survey.</a></p>
-  <p><a href="/cool.html">Other cool stuff</a></p>
 </form>
 </body>
 </html>
