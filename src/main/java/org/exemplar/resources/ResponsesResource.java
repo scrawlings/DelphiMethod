@@ -11,7 +11,7 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@Path("/responses")
+@Path("/delphi/responses")
 public class ResponsesResource {
 
     @GET

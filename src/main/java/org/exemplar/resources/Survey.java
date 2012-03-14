@@ -1,29 +1,18 @@
 package org.exemplar.resources;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.*;
 import java.util.*;
 
-@XmlRootElement(name="survey")
 public class Survey {
-    @XmlAttribute protected String id;
-    @XmlElement protected String title;
-    @XmlElement protected String description;
-    @XmlElement protected List<String> options;
+    private String id;
+    private String title;
+    private String description;
+    private List<String> options;
 
     public String getId() { return id; }
     public String getTitle() { return title; }
     public String getDescription() { return description; }
     public List<String> getOptions() { return options; }
-
-    protected Survey() {
-        this.options = new ArrayList();
-    }
 
     public Survey(String title, String description) {
         this(UUID.randomUUID().toString(), title, description);
@@ -48,12 +37,14 @@ public class Survey {
         try {
             Writer writer = new BufferedWriter(new FileWriter("data/surveys/" + getId()));
             try {
-                JAXBContext ctx = JAXBContext.newInstance(Survey.class);
-                Marshaller marshaller = ctx.createMarshaller();
-                marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-                marshaller.marshal(this, writer);
-            } catch (JAXBException jaxbe) {}
-            finally {
+                writer.write(getId() + "\n");
+                writer.write(getTitle() + "\n");
+                writer.write(getDescription() + "\n");
+
+                for (String option : getOptions()) {
+                    writer.write(option + "\n");
+                }
+            } finally {
                 writer.close();
             }
         } catch (IOException ioe) {}
@@ -74,16 +65,19 @@ public class Survey {
     }
     public static Survey recover(File surveyFile) {
         try {
-            BufferedReader reader;
-            try {
-                reader = new BufferedReader(new FileReader(surveyFile));
-            } catch (FileNotFoundException fnfe) {
-                return null;
+            BufferedReader reader = new BufferedReader(new FileReader(surveyFile));
+            String id = reader.readLine();
+            String title = reader.readLine();
+            String description = reader.readLine();
+            Survey survey = new Survey(id, title, description);
+
+            String option = reader.readLine();
+            while (option != null) {
+                survey.appendOption(option);
+                option = reader.readLine();
             }
-            JAXBContext ctx = JAXBContext.newInstance(Survey.class);
-            Survey survey = (Survey)ctx.createUnmarshaller().unmarshal(reader);
             return survey;
-        } catch (JAXBException jaxbe) {}
+        } catch (IOException ioe) {}
 
         return null;
     }

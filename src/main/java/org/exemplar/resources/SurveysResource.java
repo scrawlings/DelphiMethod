@@ -8,10 +8,16 @@ import freemarker.template.TemplateException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.io.*;
+import java.net.URI;
+import java.security.PublicKey;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.List;
+import java.util.UUID;
+import java.util.Map.Entry;
 
-@Path("/surveys")
+@Path("/delphi/surveys")
 public class SurveysResource {
 
     @DELETE
@@ -46,8 +52,9 @@ public class SurveysResource {
         final @PathParam("id") String id
     ) {
         return new StreamingOutput() {
-            public void write(OutputStream output) throws IOException, WebApplicationException {
-                Map<String, Object> root = new HashMap<String, Object>();
+
+			public void write(OutputStream output) throws IOException, WebApplicationException {
+                Map root = new HashMap();
                 root.put("survey", Survey.recover(id));
                 Template page = org.exemplar.WebAppStandalone.cfg.getTemplate("survey.ftl");
                 try {
@@ -55,7 +62,7 @@ public class SurveysResource {
                 } catch (TemplateException te) {
                     throw new WebApplicationException(Response.Status.INTERNAL_SERVER_ERROR);
                 }
-            }
+            } 
         };
     }
 
@@ -86,8 +93,9 @@ public class SurveysResource {
     {
 
         return new StreamingOutput() {
-            public void write(OutputStream output) throws IOException, WebApplicationException {
-                Map<String, Object> root = new HashMap<String, Object>();
+
+			public void write(OutputStream output) throws IOException, WebApplicationException {
+                Map root = new HashMap();
                 root.put("surveys", Survey.all());
                 Template page = org.exemplar.WebAppStandalone.cfg.getTemplate("surveys.ftl");
                 try {
@@ -95,7 +103,7 @@ public class SurveysResource {
                 } catch (TemplateException te) {
                     throw new WebApplicationException(Response.Status.INTERNAL_SERVER_ERROR);
                 }
-            }
+            } 
         };
     }
 

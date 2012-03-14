@@ -12,7 +12,7 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@Path("/")
+@Path("/delphi")
 public class WelcomeResource {
 
     @GET

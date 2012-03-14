@@ -6,46 +6,31 @@ import freemarker.template.DefaultObjectWrapper;
 
 import java.io.File;
 
-import com.sun.grizzly.http.embed.GrizzlyWebServer;
-import com.sun.grizzly.http.servlet.ServletAdapter;
-import com.sun.grizzly.tcp.http11.GrizzlyAdapter;
-import com.sun.grizzly.tcp.http11.GrizzlyRequest;
-import com.sun.grizzly.tcp.http11.GrizzlyResponse;
-import com.sun.jersey.spi.container.servlet.ServletContainer;
+import com.sun.grizzly.http.SelectorThread;
+import com.sun.jersey.api.container.grizzly.GrizzlyWebContainerFactory;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class WebAppStandalone {
     public static Configuration cfg;
-    
+
     public static void main(String[] args) throws IOException {
+        final String baseUri = "http://localhost:9998/";
+        final Map<String, String> initParams = new HashMap<String, String>();
+
         cfg = new Configuration();
         cfg.setDirectoryForTemplateLoading(new File("static/templates"));
         cfg.setObjectWrapper(new DefaultObjectWrapper());
-        
-        ServletAdapter jerseyAdapter = new ServletAdapter();
-        jerseyAdapter.addInitParameter("com.sun.jersey.config.property.packages", "org.exemplar.resources");
-        jerseyAdapter.setContextPath("/delphi");
-        jerseyAdapter.setServletInstance(new ServletContainer());
 
-        GrizzlyWebServer gws = new GrizzlyWebServer(9998);
-        gws.addGrizzlyAdapter(jerseyAdapter, new String[] {"/delphi"});
-        gws.addGrizzlyAdapter(new StaticGrizzlyAdapter("static/web"), new String[] {"/"});
-        
-        gws.start();
+        initParams.put("com.sun.jersey.config.property.packages", "org.exemplar.resources");
+
+        System.out.println("Starting grizzly...");
+        SelectorThread threadSelector = GrizzlyWebContainerFactory.create(baseUri, initParams);
+        System.out.println(String.format("Server at %sdelphi\nHit enter to stop it...", baseUri));
+        System.in.read();
+        threadSelector.stopEndpoint();
+        System.exit(0);
     }
-    
-    static class StaticGrizzlyAdapter extends GrizzlyAdapter { 
-        public StaticGrizzlyAdapter(String publicDirectory) { 
-    	    super(publicDirectory);
-            setHandleStaticResources(true);
-        } 
-
-        public void service(GrizzlyRequest grizzlyRequest, GrizzlyResponse grizzlyResponse) {
-        	try { 
-                grizzlyResponse.setStatus(404); 
-                grizzlyResponse.getWriter().print("Resoure can not be found");
-            } catch (IOException e) { }
-        } 
-    } 
 }
